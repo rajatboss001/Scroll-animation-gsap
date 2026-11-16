@@ -136,7 +136,7 @@ const Homepage = () => {
       ref={componentRef}
       className="overflow-hidden bg-gray-200 text-black"
     >
-      <div className="max-w-[1536px] mx-auto">
+      <div className="max-w-384 mx-auto">
 
         {/* HERO SECTION */}
         <section className="min-h-screen flex justify-center items-center bg-gray-200 px-6">
@@ -157,16 +157,14 @@ const Homepage = () => {
           </div>
         </section>
 
-        {/* PINNED ANIMATION SECTION */}
         <section className="this-section min-h-screen relative overflow-hidden bg-gray-200">
 
-          {/* LEFT IMAGE AREA */}
           <div className="absolute inset-0">
 
             {controllers.map((controller, index) => (
               <div
                 key={controller.title}
-                className={`card card-${index + 1} w-[320px] h-[500px] flex justify-center items-center ${
+                className={`card card-${index + 1} w-[320px] h-125 flex justify-center items-center ${
                   index === 0 ? "z-50" : "z-40"
                 }`}
               >
@@ -182,19 +180,18 @@ const Homepage = () => {
 
           </div>
 
-          {/* RIGHT CONTENT AREA */}
           <div className="absolute inset-0">
 
             {controllers.map((controller, index) => (
               <div
                 key={controller.title}
-                className="controller-content absolute right-[8%] w-[500px] max-w-[40vw]"
+                className="controller-content absolute right-[8%] w-125 max-w-[40vw]"
               >
                 <span className="block text-sm tracking-[0.4em] uppercase mb-5 opacity-50">
                   Controller 0{index + 1}
                 </span>
 
-                <h2 className="text-5xl lg:text-6xl xl:text-7xl uppercase font-black tracking-[-0.05em] leading-[0.9] mb-6">
+                <h2 className="text-5xl lg:text-6xl xl:text-7xl uppercase font-black tracking-tighter leading-[0.9] mb-6">
                   {controller.title}
                 </h2>
 
@@ -214,7 +211,6 @@ const Homepage = () => {
 
           </div>
 
-          {/* SECTION LABEL */}
           <div className="absolute bottom-8 left-8 text-xs tracking-[0.3em] uppercase">
             PlayStation / Collection
           </div>
